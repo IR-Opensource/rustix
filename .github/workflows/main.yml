@@ -19,13 +19,6 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
-      # Install global cargo tools
-      - name: Install cargo packages
-        run: |
-          cargo install cargo-edit
-          cargo install cargo-watch
-          cargo install ripgrep
-
       # Install/build dependencies from Cargo.toml
       - name: Build project
         run: cargo build
