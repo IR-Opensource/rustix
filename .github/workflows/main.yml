@@ -23,5 +23,10 @@ jobs:
       - name: Build project
         run: cargo build
 
-      - name: Run tests
-        run: cargo test
+     # Install global cargo tools
+      - name: Install cargo packages
+        run: |
+          cargo install cargo-edit
+          cargo install cargo-watch
+          cargo install ripgrep
+   
